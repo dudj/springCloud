@@ -7,10 +7,10 @@ eureka:
     prefer-ip-address: true
 spring:
   application:
-    name: product
+    name: user
   cloud:
     config:
+      profile: dev
       discovery:
         enabled: true
         service-id: config
-      profile: dev

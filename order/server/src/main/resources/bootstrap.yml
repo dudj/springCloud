@@ -14,12 +14,12 @@ spring:
       discovery:
         enabled: true
         service-id: config
-    stream:
-      bindings:
-        myMessage:
-          group:
-            order
-          content-type: application/json
+#    stream:
+#      bindings:
+#        myMessage:
+#          group:
+#            order
+#          content-type: application/json
 #  datasource:
 #    driver-class-name: com.mysql.jdbc.Driver
 #    username: root
