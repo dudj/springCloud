@@ -14,16 +14,16 @@ spring:
       discovery:
         enabled: true
         service-id: config
-#    stream:
-#      bindings:
-#        myMessage:
-#          group:
-#            order
-#          content-type: application/json
-#  datasource:
-#    driver-class-name: com.mysql.jdbc.Driver
-#    username: root
-#    password: root
-#    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=utf-8&useSSL=false
-#  jpa:
-#    show-sql: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+    #默认的key就是方法名
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
