@@ -74,6 +74,11 @@ public class ProductController {
      */
     @PostMapping("/listForId")
     public List<ProductInfoOutput> listForId(@RequestBody List<String> productIdList){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this.productInfoService.findDataByIds(productIdList);
     }
 
