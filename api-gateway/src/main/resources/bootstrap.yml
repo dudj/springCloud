@@ -13,3 +13,10 @@ spring:
       discovery:
         enabled: true
         service-id: config
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
