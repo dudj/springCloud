@@ -3,6 +3,7 @@ package com.linziyi.eureka.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.time.FastDateFormat;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -111,4 +112,9 @@ public class CrontabController {
         }
         return result;
     }
+    @GetMapping("/test")
+    public void Test(){
+        log.info("test:{}",new Date());
+    }
+
 }
