@@ -13,8 +13,8 @@ eureka:
 spring:
   application:
     name: eureka
-server:
-    servlet:
-        context-path: /eureka
+#server:
+#    servlet:
+#        context-path: /eureka
 #  port: 8761
 

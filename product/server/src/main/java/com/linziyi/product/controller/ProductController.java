@@ -11,6 +11,7 @@ import com.linziyi.product.utils.ResultVoUtil;
 import com.linziyi.product.vo.ProductInfoVo;
 import com.linziyi.product.vo.ProductVo;
 import com.linziyi.product.vo.ResultVo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/product")
+@Slf4j
 public class ProductController {
     @Autowired
     private ProductCategoryService productCategoryService;
@@ -74,8 +76,9 @@ public class ProductController {
      */
     @PostMapping("/listForId")
     public List<ProductInfoOutput> listForId(@RequestBody List<String> productIdList){
+        log.info("listForId中productIdList的值为：{}",productIdList.toString());
         try {
-            Thread.sleep(2000);
+            Thread.sleep(0);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

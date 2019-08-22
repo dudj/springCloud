@@ -14,3 +14,12 @@ spring:
         enabled: true
         service-id: config
       profile: dev
+  sleuth:
+    sampler:
+      percentage: 1
+  zipkin:
+    base-url: http://120.79.193.21:9411
+
+logging:
+  level:
+    org.springframework.cloud.netflix.feign: debug
