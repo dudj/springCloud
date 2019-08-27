@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>config</name>
     <description>config project for Spring Boot</description>
-    <packaging>war</packaging>
+    <!--<packaging>war</packaging>-->
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.M2</spring-cloud.version>
